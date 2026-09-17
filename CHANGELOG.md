@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 — 2026-09-17
+
+- Configuration change proposals now explicitly recommend settings and pause before task execution until the user confirms switching or chooses to continue with current settings.
+- Matching settings and suppressed advice keep executing without a checkpoint; explicit no-wait preferences are respected.
+- Continuation is inferred from user intent, including ordinary assent and informal commands; no exact confirmation phrase is required, and assent does not imply switching models.
+- Added conversation checks for the pause, resumption and option selection; removed an obsolete reference to a repository validator.
+
 ## 0.1.0 — 2026-09-17
 
 - Initial portable skills-only plugin and repository marketplace for GitHub distribution.

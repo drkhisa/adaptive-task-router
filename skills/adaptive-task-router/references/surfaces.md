@@ -14,7 +14,7 @@ Repository development takes priority over Work. A bounded explanation of code u
 
 ChatGPT desktop offers Chat and Work; Codex is another product workflow. Work Cloud runs in an isolated environment and cannot directly access local device files, apps, or browser tabs. Uploaded files, authorized connections, local desktop permissions, and repository access affect feasibility.
 
-Recommendations are about workflows, not permission grants. Don't imply a switch will automatically transfer files, preserve every tool, grant access, or start execution. If the current host already has the necessary capabilities, continue work while offering a recommendation. If it lacks essential capabilities, explain the gap.
+Recommendations are about workflows, not permission grants. Don't imply a switch will automatically transfer files, preserve every tool, grant access, or start execution. When proposing a change, follow the recommendation checkpoint in `SKILL.md`: wait for the user's decision before execution. If it lacks essential capabilities, explain the gap.
 
 Model access can differ between local Codex and Codex cloud. Resolve model choices for the recommended execution environment rather than borrowing the current host's list unconditionally.
 

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "adaptive-task-router",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Automatically recommend the minimum sufficient ChatGPT surface, available model, and reasoning effort for each substantive task.",
   "author": { "name": "drkhisa", "url": "https://github.com/drkhisa" },
   "homepage": "https://github.com/drkhisa/adaptive-task-router#readme",
@@ -13,7 +13,7 @@
       "interface": {
         "displayName": "Adaptive Task Router",
         "shortDescription": "Choose the right surface, model, and reasoning effort.",
-        "longDescription": "ATR recommends a minimum sufficient configuration, including upgrades and downgrades. It compares settings only when observable and never changes them itself.",
+        "longDescription": "ATR recommends a minimum sufficient configuration, including upgrades and downgrades, and waits for your decision before execution. It compares settings only when observable and never changes them itself.",
         "developerName": "drkhisa",
         "category": "Productivity",
         "capabilities": [],

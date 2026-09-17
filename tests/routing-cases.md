@@ -1,6 +1,6 @@
 # Routing acceptance cases
 
-These are cross-domain behavioral fixtures, not a benchmark or proof of quality. Test with the skill in a supported host; don't provide the expected answer to the evaluating model. `scripts/validate.py` checks fixture consistency, not the model's classification.
+These are cross-domain behavioral fixtures, not a benchmark or proof of quality. Test with the skill in a supported host; don't provide the expected answer to the evaluating model. Packaging and fixture consistency checks do not establish the model's classification.
 
 ## Fixture conventions
 
@@ -13,6 +13,8 @@ Current and expected tuples use `surface/model-class/effort-class`; `?` means un
 Flags: `normal` = no ignored-advice history; `repeat` = same ignored advice is already visible for the unchanged workflow; `show` = user explicitly requests the recommendation; `early-change` = materially changed requirements less than 30 minutes after ignored advice; `late-change` = materially changed requirements at least 30 minutes later; `no-time-change` = changed requirements but elapsed time is unknown after ignored advice. `continue` and `revision` without ignored advice follow the ordinary output gate. Known mismatches are also suppressed after ignored advice.
 
 For all cases, assess the whole described task. One-line messages should name only needed changes, use the user's language, and never fabricate previous settings. Domain labels are examples, not routing rules.
+
+When a message proposes a change, the first response must contain only the proposal and decision prompt, with no task answer or execution tools. `Message=yes` alone does not always imply a pause: displaying matching settings on request is informational. Suppressed advice and matching settings must not block execution.
 
 | ID | Task and context | Current | Available | Expected surface | Expected model class | Expected reasoning | Message | Flag | Test rationale |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -74,6 +76,13 @@ For all cases, assess the whole described task. One-line messages should name on
 | 56 | Continue the same bounded ambiguous diagnosis on Sol Medium with relevant observed success | Chat/strong/MEDIUM | all | Chat | strong | MEDIUM | no | continue | Don't downgrade to Terra on price alone |
 
 ## Additional behavioral checks
+
+- On Codex/Astra/High with Luna/Low supplied as available, ask to correct «Превет, как дила?». The first response must explicitly recommend a sufficient configuration and await the user's decision, without returning corrected text. In separate conversations test each reply «продолжай», «продолжай так», «ок», «ОК!», «действуй», «хуярь» and «оставляем как есть, исправляй»: it must return «Привет, как дела?» on current settings without another recommendation or checkpoint, and must not claim switching occurred. Request another short correction: it must perform it without repeating ignored advice.
+- Repeat the correction in a fresh conversation; after the proposal report «Переключил на Luna Low, готово». The skill must resume the pending correction without asking for the task again or claiming it switched the model itself.
+- After a proposal reply only «Luna Low». The skill must distinguish selecting from switching, ask briefly to apply and confirm, and not execute yet.
+- After a proposal reply «Ладно, бери Luna Low и делай». The clear intent to proceed must resume execution without demanding a prescribed phrase, but the skill must not claim that active settings changed without evidence.
+- With matching reported settings, request a correction and explicitly show the recommendation. It must display the configuration and complete the correction without waiting for a pointless switch.
+- Explicitly request «выполняй сразу, без пауз» on a known mismatch. User preference overrides the checkpoint; the task must execute in that response.
 
 - In a literal `ATR` or `ATR проверь` invocation with no accompanying or active substantive task, ask what task to assess. Do not classify the command itself as the user's substantive task.
 - An incidental `ATR` in a quoted document is not an explicit routing command.

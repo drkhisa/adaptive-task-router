@@ -42,6 +42,12 @@ If the interval is unknown, keep the ignored-advice suppression for that workflo
 
 Missing essential capabilities must be explained as part of completing the main task, even during the cooldown. This is a concrete execution limitation, not another unsolicited model suggestion. Don't claim that work was performed when the tools were absent.
 
+## Proposal before execution
+
+A change recommendation is a checkpoint, not an aside attached to an already completed task. Say explicitly what configuration you recommend and why, ask the user to switch and confirm or continue with current settings, then stop. Do not append the answer, corrected text or execution results. Keep the pending task in visible context for the next reply.
+
+Understand the reply semantically: a report of switching in any wording resumes the task, and any clear go-ahead or ordinary assent resumes with current settings unless a switch is reported or observed. "продолжай", "продолжай так", "ок", "действуй", "делай", "хуярь" and equivalents are examples, not an exhaustive list or mandatory phrases. Do not demand exact wording or another confirmation once the intent is clear. Assent alone does not establish switching. An explicit refusal or continuation without adopting advice suppresses repeated advice. Selecting an option without a go-ahead does not establish active settings; selecting an option together with a go-ahead permits execution on observable current settings without another confirmation. Merely displaying a matching configuration creates no checkpoint. Explicit requests to execute without waiting take precedence.
+
 ## Several viable options
 
 Offer one to three configurations only when each is available and expected to produce comparable task quality: correctness, completeness, compliance with constraints and required checks. Use the same success criteria for every option. Comparable quality does not mean identical wording. Rank the economical sufficient option first, then at most two alternatives. Do not enumerate the inventory or pad to three. Exclude cheaper configurations with doubtful quality or likely extra failed attempts. Do not run each candidate merely to test routing.
@@ -50,9 +56,11 @@ If a user wants the current sufficient stronger model, it can remain an option. 
 
 Example, with all options and the cost ordering supplied by the host:
 
-> ⚙️ Можно Terra · Medium — экономнее; Sol · Medium или Astra · Medium — подходящие альтернативы с большим расходом.
+> ⚙️ Рекомендую Terra · Medium — экономнее; также подходят Sol · Medium и Astra · Medium. Переключите настройки и сообщите, либо скажите продолжать на текущих.
 
 ## One-line examples
+
+Examples below show the recommendation clause; for a change proposal append the brief confirmation-or-continuation choice and stop before doing the task.
 
 Only effort changes:
 

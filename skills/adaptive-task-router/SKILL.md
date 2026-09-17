@@ -5,7 +5,7 @@ description: Automatically assess substantive tasks before execution to recommen
 
 # Adaptive Task Router
 
-Recommend settings; never switch them, create tasks, delegate, or delay the user's work solely for routing. Explicit user preferences override these guidelines.
+Recommend settings; never switch them, create tasks, or delegate. When proposing a configuration change, pause before execution for the user's decision. Explicit user preferences override these guidelines.
 
 Treat standalone or leading commands `ATR`, `ATR проверь`, and `ATR подбери` as explicit routing requests, not incidental mentions in quoted material. Assess the accompanying task, or the active substantive task if no new task follows; ask what to assess if neither exists. These cues do not bypass host skill selection. The output gate still applies unless the user explicitly asks to see the recommendation.
 
@@ -26,11 +26,17 @@ Choose in order:
 Read current settings only from host-supplied information or explicit user statements. A configured default or list of available models does not establish the active settings. Never guess.
 
 - All three settings known and equal to the recommendation: no ATR message.
-- A known setting differs: offer necessary changes once, including downgrades. Give up to three available options only if expected correctness, completeness and constraint compliance are comparable. Put the economical sufficient one first; exclude doubtful weaker options. One short line is preferred.
-- Unknown settings: give tentative advice without inventing a previous value or claiming availability. Use a model class or conditional label if access is unknown.
+- A known setting differs: explicitly recommend necessary changes once, including downgrades. Give up to three available options only if expected correctness, completeness and constraint compliance are comparable. Put the economical sufficient one first; exclude doubtful weaker options.
+- Unknown settings: give tentative advice without inventing a previous value or claiming availability. Use a model class or conditional label if access is unknown; don't demand a switch to an unverified option.
 - If the user continues without adopting advice, treat it as ignored and suppress repeated advice, including known mismatches. Within that workflow, reconsider unsolicited advice only after materially changed requirements and at least 30 minutes since the last advice, using reliable supplied timestamps. Time alone never triggers a reminder. If elapsed time is unknown, keep suppression; an explicit routing request or genuinely independent new task permits a fresh assessment. Do not query tools solely for timing.
 
-Use the user's language and official UI labels. Continue the main task with current capabilities. If essential capabilities are absent, state the required transition briefly. A recommendation does not change the model executing this response.
+## Recommendation checkpoint
+
+When the output gate permits a change proposal, give the recommendation and a short choice, then end the response. Do not solve even a trivial part of the task or start execution tools in that response. For example: "Рекомендую Luna · Low: для этой задачи достаточно. Переключи настройки и сообщи, либо скажи продолжать на текущих."
+
+Interpret the next reply by intent, not an exact phrase or keyword whitelist. Any clear instruction or ordinary assent to proceed (for example «продолжай», «продолжай так», «ок», «действуй», «делай», «хуярь», or equivalents in the user's language) resumes the pending task with current settings unless a switch is reported or observed. Do not demand a prescribed confirmation phrase or ask again when the intent is clear. A report of completed switching in any wording also resumes the task. Continuation without adopting advice counts as ignored; do not pause or repeat the suggestion again. A bare option selection with no intent to proceed is not evidence of switching: briefly ask the user to apply it or continue with current settings. Reassess substantive new requirements under the existing suppression rules. Never claim to have changed settings or infer them solely from assent or option selection.
+
+No checkpoint when advice is suppressed, settings match, the user only asks to display matching settings, or the user explicitly requests execution without waiting. Use the user's language and official UI labels. If essential capabilities are absent, state the required transition briefly. A recommendation does not change the model executing this response.
 
 ## References — load only when needed
 
