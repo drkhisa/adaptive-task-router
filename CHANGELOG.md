@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2 — 2026-09-17
+
+- Shortened change proposals to settings and a brief switch-or-continue choice, without unsolicited task explanations or confirmation instructions.
+- Mandatory host disclosures are kept in the same compact line instead of a separate paragraph; host requirements cannot be suppressed by the skill.
+
 ## 0.1.1 — 2026-09-17
 
 - Configuration change proposals now explicitly recommend settings and pause before task execution until the user confirms switching or chooses to continue with current settings.

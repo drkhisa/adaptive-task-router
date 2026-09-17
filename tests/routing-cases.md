@@ -16,6 +16,8 @@ For all cases, assess the whole described task. One-line messages should name on
 
 When a message proposes a change, the first response must contain only the proposal and decision prompt, with no task answer or execution tools. `Message=yes` alone does not always imply a pause: displaying matching settings on request is informational. Suppressed advice and matching settings must not block execution.
 
+The default proposal is one short line with needed settings and a switch-or-continue choice, without task reasoning, savings claims, task restatement or prescribed confirmation phrases. If a host mandates a source/quote/explanation for waiting, include only the required disclosure compactly in the same line; do not assess its presence as an ATR routing failure.
+
 | ID | Task and context | Current | Available | Expected surface | Expected model class | Expected reasoning | Message | Flag | Test rationale |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 01 | Correct two typos in a short sentence | Chat/economical/FAST | all | Chat | economical | FAST | no | normal | Obvious local edit; exact match |

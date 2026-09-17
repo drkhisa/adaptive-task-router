@@ -44,7 +44,7 @@ Missing essential capabilities must be explained as part of completing the main 
 
 ## Proposal before execution
 
-A change recommendation is a checkpoint, not an aside attached to an already completed task. Say explicitly what configuration you recommend and why, ask the user to switch and confirm or continue with current settings, then stop. Do not append the answer, corrected text or execution results. Keep the pending task in visible context for the next reply.
+A change recommendation is a checkpoint, not an aside attached to an already completed task. Propose only needed settings and ask briefly whether to switch or continue, then stop. Default to one short line without reasoning, savings claims or instructions about how to confirm. Give an explanation only on request or for a concrete capability gap. Required host disclosures follow the compact format in `SKILL.md`; no extra paragraph. Do not append the answer, corrected text or execution results. Keep the pending task in visible context for the next reply.
 
 Understand the reply semantically: a report of switching in any wording resumes the task, and any clear go-ahead or ordinary assent resumes with current settings unless a switch is reported or observed. "продолжай", "продолжай так", "ок", "действуй", "делай", "хуярь" and equivalents are examples, not an exhaustive list or mandatory phrases. Do not demand exact wording or another confirmation once the intent is clear. Assent alone does not establish switching. An explicit refusal or continuation without adopting advice suppresses repeated advice. Selecting an option without a go-ahead does not establish active settings; selecting an option together with a go-ahead permits execution on observable current settings without another confirmation. Merely displaying a matching configuration creates no checkpoint. Explicit requests to execute without waiting take precedence.
 
@@ -56,31 +56,31 @@ If a user wants the current sufficient stronger model, it can remain an option. 
 
 Example, with all options and the cost ordering supplied by the host:
 
-> ⚙️ Рекомендую Terra · Medium — экономнее; также подходят Sol · Medium и Astra · Medium. Переключите настройки и сообщите, либо скажите продолжать на текущих.
+> Предлагаю: Terra · Medium / Sol · Medium / Astra · Medium. Переключишься или продолжать так?
 
 ## One-line examples
 
-Examples below show the recommendation clause; for a change proposal append the brief confirmation-or-continuation choice and stop before doing the task.
+Examples use the compact checkpoint format; stop before doing the task. Availability remains a condition for named options.
 
 Only effort changes:
 
-> ⚙️ Рекомендую High → Light: это простое редактирование.
+> Предлагаю: Light. Переключишься или продолжать так?
 
 Only model changes:
 
-> ⚙️ Рекомендую Astra → Luna: достаточно прямого преобразования текста.
+> Предлагаю: Luna. Переключишься или продолжать так?
 
 Several known fields change:
 
-> ⚙️ Рекомендую Work · Astra · High вместо Chat · Terra · Medium: нужен сложный многоэтапный анализ источников.
+> Предлагаю: Work · Astra · High. Переключишься или продолжать так?
 
 Only one field is unknown:
 
-> ⚙️ Для этой задачи рекомендую Light; текущий уровень размышлений не виден.
+> Ориентир: Light; текущий уровень не виден. Продолжать так?
 
 All settings and model access unknown:
 
-> ⚙️ Ориентир: Chat · быстрая доступная модель · минимальные размышления; текущие настройки не видны.
+> Ориентир: Chat · быстрая модель · минимум размышлений. Продолжать так?
 
 Essential repository tools absent:
 
