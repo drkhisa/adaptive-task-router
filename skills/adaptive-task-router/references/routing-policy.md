@@ -28,7 +28,11 @@ Treat current surface, active model, effort, and available alternatives as separ
 
 An unavailable preferred model requires a sufficient available alternative. If none is adequate, explain the capability gap briefly; do not pretend an available weak model will reliably solve the problem. Use concrete names and supported levels from the target host's supplied inventory even when active settings are unknown. Only if grounded choices cannot be established, ask briefly for missing models or levels. Don't ask for a plan or model inventory on every turn.
 
-Unknown current fields cannot be compared. Known matching fields should not be repeated. Never assume the user adopted advice, but do not keep repeating it either. When all fields are known and match the minimum sufficient recommendation, stay completely silent unless asked to show it.
+Unknown current fields cannot be compared. Known matching fields should not be repeated. Never assume the user adopted advice, but do not keep repeating it either. If known settings are sufficient and no grounded improvement warrants changing them, stay silent unless asked to show them; a typical example is not an obligatory configuration.
+
+Model sufficiency does not settle effort: compare both independently before task results or read-only execution. For reading one known version field, retain a sufficient Luna and lower High to the offered Low. For an audit of interacting instructions, evaluate ambiguity and dependencies before inspecting the files; the fact that the audit only reads files does not make it FAST.
+
+Target inventories are separate. Chat choices do not expand because Work or Codex exposes other models, and API effort names cannot override supplied UI labels. Repository edits, tests and commits choose Codex specifically before considering Work. For a new independent short translation in Work, choose Chat and resolve its own inventory.
 
 ## Ignored advice and timing
 

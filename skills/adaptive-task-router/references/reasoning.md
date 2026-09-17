@@ -25,7 +25,7 @@ The FAST class deliberately groups the smallest useful settings; `none` and `low
 | GPT-5.5 | `none`, `low`, `medium`, `high`, `xhigh` | No API `max` in the current model documentation |
 | Other models | Use their supplied supported list | API values do not prove that every client exposes them |
 
-For Spark and additional models, use host metadata or the current model's documentation when explicit setup is requested. If exact settings are unavailable, recommend the internal depth in plain language and mark the precise UI setting as unknown.
+For Spark and additional models, use host metadata or the current model's documentation when explicit setup is requested. If exact settings are unavailable, keep internal depth internal and ask briefly for supported labels rather than proposing an abstract level as a usable setting.
 
 `Instant` is not a universal alias for `none` or `low`. Preserve it only when a host explicitly supplies that label and its meaning. Use official labels of the actual client, not labels guessed from the product name.
 

@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.4 — 2026-09-17
+
+- Made pre-execution routing explicit for task answers and read-only tools, with independent model and effort checks.
+- Clarified target-specific model/effort inventories and Codex priority for repository work; independent short Work requests can recommend Chat.
+- Included simple requests in the discovery description; implicit selection remains a host decision, not a guaranteed interception.
+- Sufficient settings remain silent without a grounded reason to change; typical examples do not impose mandatory configurations.
+- Removed contradictory advice to display abstract reasoning levels when supported labels are unknown.
+
 ## 0.1.3 — 2026-09-17
 
 - Made the new-conversation requirement prominent at the top of README: installation and updates are not automatically loaded into already open conversations.
