@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3 — 2026-09-17
+
+- Made the new-conversation requirement prominent at the top of README: installation and updates are not automatically loaded into already open conversations.
+- Existing Codex conversations keep Codex when it can do the work, including simple text requests; recommendations name concrete available models and supported effort instead of an abstract Chat fallback.
+- Unknown active settings no longer hide a supplied model inventory; truly missing choices cause one short clarification. Shortened the checkpoint prompt and its quotable waiting instruction.
+
 ## 0.1.2 — 2026-09-17
 
 - Shortened change proposals to settings and a brief switch-or-continue choice, without unsolicited task explanations or confirmation instructions.

@@ -10,6 +10,8 @@ Verified: 2026-09-17. Runtime information takes precedence over this snapshot.
 
 Repository development takes priority over Work. A bounded explanation of code usually fits Chat even if it requires careful reasoning.
 
+These suitability rules do not require leaving an existing Codex task: when Codex has the needed capabilities, retain it for simple text, calculations and code explanations too. Adjust its model and effort instead. Recommend leaving Codex only for a concrete capability gap or when the user explicitly asks to compare environments. Chat and Work remain choices for ChatGPT workflows.
+
 ## Environment matters
 
 ChatGPT desktop offers Chat and Work; Codex is another product workflow. Work Cloud runs in an isolated environment and cannot directly access local device files, apps, or browser tabs. Uploaded files, authorized connections, local desktop permissions, and repository access affect feasibility.

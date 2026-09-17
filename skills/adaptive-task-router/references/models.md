@@ -25,7 +25,7 @@ Specialized models, third-party providers, or additional host models are candida
 
 1. Filter by the target surface/environment, actual access, required modalities and tools.
 2. Choose the least costly/fastest sufficient candidate from that inventory.
-3. If no inventory is visible, name a capability class, or condition a named candidate on availability. Never claim the user has it.
+3. Distinguish unknown active settings from unknown inventory: the target host's explicit available-model metadata establishes candidates, even when its active model is not shown. Use actual names and supported levels. If no inventory is visible, consider a known current model only within its grounded supported choices; otherwise ask one short question for the missing model/effort choices. Do not present "fast model" or an unnamed capability class as actionable advice, and never claim an unverified entitlement.
 4. If the inventory lacks a sufficient option, report the gap; use the strongest available option only as a qualified fallback.
 
 Availability depends on plan, rollout, sign-in method, client and workspace controls. The current documentation lists Astra as unavailable in Codex cloud and Sol as available there; this restriction does not apply identically to local Codex. Free/Go/other plans must not receive an unconditional entitlement claim.

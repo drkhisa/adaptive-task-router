@@ -20,13 +20,13 @@ Escalate for genuinely difficult synthesis, ambiguity, interacting constraints, 
 
 "Continue" inherits the unfinished workflow. A clarification or correction causes a fresh brief assessment of the workflow with that information included; reassessment need not cause a setting change. A clearly independent request is assessed on its own.
 
-Do not recommend leaving an active repository workflow just because its next command is easy. A new standalone question in the same conversation can merit Chat. Recommend a transition without moving the conversation or creating another task yourself.
+Do not recommend leaving an existing Codex conversation just because a command or standalone question is easy. Keep Codex if it can execute the request and recommend its concrete model/effort instead. Leaving Codex requires a concrete capability gap or an explicit environment comparison request. In ChatGPT, independent tasks may still justify switching between Chat and Work. Recommend a transition without moving the conversation or creating another task yourself.
 
 ## Availability and observability
 
 Treat current surface, active model, effort, and available alternatives as separate fields. Each can be unknown. Tool schemas can establish supported alternatives when explicitly described as available to this host; they do not necessarily identify the active model. User-reported settings can be used as reported, with subsequent corrections taking precedence.
 
-An unavailable preferred model requires a sufficient available alternative. If none is adequate, explain the capability gap briefly; do not pretend an available weak model will reliably solve the problem. If availability is unknown, recommend a class or a named model conditionally. Don't ask for a plan or model inventory on every turn.
+An unavailable preferred model requires a sufficient available alternative. If none is adequate, explain the capability gap briefly; do not pretend an available weak model will reliably solve the problem. Use concrete names and supported levels from the target host's supplied inventory even when active settings are unknown. Only if grounded choices cannot be established, ask briefly for missing models or levels. Don't ask for a plan or model inventory on every turn.
 
 Unknown current fields cannot be compared. Known matching fields should not be repeated. Never assume the user adopted advice, but do not keep repeating it either. When all fields are known and match the minimum sufficient recommendation, stay completely silent unless asked to show it.
 
@@ -56,7 +56,7 @@ If a user wants the current sufficient stronger model, it can remain an option. 
 
 Example, with all options and the cost ordering supplied by the host:
 
-> Предлагаю: Terra · Medium / Sol · Medium / Astra · Medium. Переключишься или продолжать так?
+> Предлагаю: Terra · Medium / Sol · Medium / Astra · Medium. Продолжать?
 
 ## One-line examples
 
@@ -64,23 +64,23 @@ Examples use the compact checkpoint format; stop before doing the task. Availabi
 
 Only effort changes:
 
-> Предлагаю: Light. Переключишься или продолжать так?
+> Предлагаю: Light. Продолжать?
 
 Only model changes:
 
-> Предлагаю: Luna. Переключишься или продолжать так?
+> Предлагаю: Luna. Продолжать?
 
 Several known fields change:
 
-> Предлагаю: Work · Astra · High. Переключишься или продолжать так?
+> Предлагаю: Work · Astra · High. Продолжать?
 
 Only one field is unknown:
 
-> Ориентир: Light; текущий уровень не виден. Продолжать так?
+> Предлагаю: Light. Продолжать?
 
 All settings and model access unknown:
 
-> Ориентир: Chat · быстрая модель · минимум размышлений. Продолжать так?
+> Какие модели и уровни доступны?
 
 Essential repository tools absent:
 

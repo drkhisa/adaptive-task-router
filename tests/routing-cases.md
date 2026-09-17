@@ -6,7 +6,7 @@ These are cross-domain behavioral fixtures, not a benchmark or proof of quality.
 
 Each fixture explicitly supplies its settings and available candidates; do not borrow the tester's actual model inventory. The inventories apply to the **target** surface/environment. Except where noted, the host has the required tools and every target surface is available.
 
-Model classes: `economical` = Luna, `balanced` = Terra, `strong` = Sol, `frontier` = Astra, `legacy` = GPT-5.5, `specialist` = eligible Codex Spark. These representatives are test choices, not universal availability claims. `all` means the four current general-purpose classes are supplied. `unknown` means no inventory is supplied: recommend a capability class without claiming named-model access.
+Model classes: `economical` = Luna, `balanced` = Terra, `strong` = Sol, `frontier` = Astra, `legacy` = GPT-5.5, `specialist` = eligible Codex Spark. These representatives are test choices, not universal availability claims. `all` means the four current general-purpose classes are supplied. `unknown` means no inventory is supplied: an internal fit class is not an actionable named option; ask briefly for missing model/effort choices if no grounded option can be established.
 
 Current and expected tuples use `surface/model-class/effort-class`; `?` means unknown. `FAST` maps to the smallest useful supported option, not universally to Instant. Compare actual host labels and models in manual evaluation.
 
@@ -35,8 +35,8 @@ The default proposal is one short line with needed settings and a switch-or-cont
 | 13 | Extract names and dates from three short supplied documents into a small table | Chat/economical/FAST | all | Chat | economical | FAST | no | normal | Several files can still be bounded work |
 | 14 | Reconcile several spreadsheets with ordinary joins and totals and deliver a checked workbook | Chat/balanced/MEDIUM | all | Work | balanced | MEDIUM | yes | normal | Multi-file artifact workflow |
 | 15 | Design a polished substantial presentation from a long ambiguous brief and supplied brand assets | Work/balanced/MEDIUM | all | Work | strong | HIGH | yes | normal | Synthesis and professional artifact require judgment |
-| 16 | Write a tiny standalone function that returns the larger of two integers | Codex/strong/HIGH | all | Chat | economical | FAST | yes | normal | Standalone code does not require a repository |
-| 17 | Explain a pasted loop with four lines of straightforward code | Codex/balanced/MEDIUM | all | Chat | economical | FAST | yes | normal | Code explanation fits Chat |
+| 16 | Write a tiny standalone function that returns the larger of two integers | Codex/strong/HIGH | all | Codex | economical | FAST | yes | normal | Stay in existing Codex; lower model and effort |
+| 17 | Explain a pasted loop with four lines of straightforward code | Codex/balanced/MEDIUM | all | Codex | economical | FAST | yes | normal | Existing Codex can explain code without a surface switch |
 | 18 | Diagnose a pasted off-by-one error and suggest a corrected snippet | Chat/balanced/FAST | all | Chat | balanced | MEDIUM | yes | normal | Small debugging needs linked checks |
 | 19 | Fix an obvious one-file typo bug in this repository and run the existing test | Chat/balanced/MEDIUM | all | Codex | balanced | MEDIUM | yes | normal | Actual repository changes require Codex |
 | 20 | Diagnose a nondeterministic repository race across services and implement a verified fix | Codex/strong/HIGH | all | Codex | frontier | VERY_HIGH | yes | normal | Coupled elusive root cause justifies escalation |
@@ -59,7 +59,7 @@ The default proposal is one short line with needed settings and a switch-or-cont
 | 37 | Correct two typos with surface unknown but excessive model and effort known | ?/frontier/HIGH | all | Chat | economical | FAST | yes | normal | Show known downgrades and qualify unknown surface |
 | 38 | Perform ordinary bounded analysis when only Terra is offered on the user's plan | Chat/balanced/MEDIUM | balanced | Chat | balanced | MEDIUM | no | normal | Respect actual inventory without a plan assumption |
 | 39 | Solve a difficult bounded diagnostic task when Sol and Astra are unavailable and only GPT-5.5 is offered and sufficient | Chat/legacy/MEDIUM | legacy | Chat | legacy | HIGH | yes | normal | Select a genuinely sufficient available older alternative |
-| 40 | Correct two typos with no observable current settings or model inventory | ?/?/? | unknown | Chat | economical | FAST | yes | normal | Class recommendation without a named entitlement claim |
+| 40 | Correct two typos with no observable current settings or model inventory | ?/?/? | unknown | Chat | economical | FAST | yes | normal | Ask briefly for choices; don't output an abstract model class as a usable configuration |
 | 41 | ATR provерь: correct two typos and explicitly show the configuration | Chat/economical/FAST | all | Chat | economical | FAST | yes | show | Explicit request to show overrides silence |
 | 42 | ATR подбери without a new task during case 20's unfinished workflow | Codex/frontier/VERY_HIGH | all | Codex | frontier | VERY_HIGH | no | continue | Text cue targets the active substantive task |
 | 43 | Repeat a simple edit while the host still reports Astra and High despite earlier ignored downgrade advice | Chat/frontier/HIGH | all | Chat | economical | FAST | no | repeat | Do not nag about an ignored known mismatch |
