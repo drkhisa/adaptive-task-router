@@ -65,20 +65,32 @@ ATR рассматривает доступные подходящие моде�
 
 Нужен клиент ChatGPT/Codex с поддержкой plugin или локальных skills. Установка не зависит от компьютера автора. Доступ к моделям и инструментам определяется вашим аккаунтом, клиентом и правилами рабочего пространства.
 
-Разработка идёт в **`dev`**. Команды GitHub заработают после отправки реализации в эту ветку; инструкция не означает, что plugin уже опубликован или перенесён в `main`.
+Стабильная версия устанавливается из **`main`**, разработка идёт в **`dev`**. Публикация в каталоге OpenAI — отдельный процесс; для этой версии используется GitHub.
+
+### Desktop, web и mobile
+
+Локальная установка через Codex CLI или копирование папки skill **не является подтверждённой установкой на весь аккаунт**. Она проверена только в локальном Codex. Не рассчитывайте, что файлы с компьютера автоматически появятся в ChatGPT на телефоне или в браузере.
+
+ChatGPT поддерживает доступные аккаунту plugins в Chat и Work на web, desktop и mobile. Чтобы plugin появился там, требуется поддерживаемая облачная установка и доступ к нему в выбранном аккаунте/workspace; одной записи в локальном marketplace недостаточно. ATR не содержит MCP server или hooks, поэтому его пакет не зависит от локального исполнения.
+
+Для workspace документирован импорт из GitHub: администратор открывает **Admin → Plugins → Add → Import marketplace**, указывает URL репозитория, оставляет Path пустым для корня, выбирает ветку `main`, импортирует каталог и настраивает доступ. После импорта нужно проверить ATR в новых разговорах на каждом целевом клиенте. Это доступ в выбранном workspace, а не во всех личных и рабочих пространствах аккаунта.
+
+Для произвольного личного аккаунта путь «установить наш GitHub plugin один раз и получить его во всех клиентах» пока не подтверждён документацией и не проверен. Публичный каталог — отдельный способ распространения, который в этой версии не используется. Проверка web/mobile остаётся открытой задачей.
+
+Источники: [Plugins](https://learn.chatgpt.com/docs/plugins), [GitHub import and workspace access](https://learn.chatgpt.com/docs/enterprise/plugin-management).
 
 ### Через агент
 
 Попросите своего агента:
 
 ```text
-Установи plugin Adaptive Task Router из https://github.com/drkhisa/adaptive-task-router, ветка dev.
+Установи plugin Adaptive Task Router из https://github.com/drkhisa/adaptive-task-router, ветка main.
 ```
 
 Для установки только скилла:
 
 ```text
-Установи skill из https://github.com/drkhisa/adaptive-task-router/tree/dev/skills/adaptive-task-router
+Установи skill из https://github.com/drkhisa/adaptive-task-router/tree/main/skills/adaptive-task-router
 ```
 
 Способ зависит от инструментов агента. Если установка не поддерживается, используйте команды ниже. Скилл копируется папкой целиком, включая `references/` и `agents/`.
@@ -88,7 +100,7 @@ ATR рассматривает доступные подходящие моде�
 Подключите каталог GitHub:
 
 ```sh
-codex plugin marketplace add drkhisa/adaptive-task-router --ref dev
+codex plugin marketplace add drkhisa/adaptive-task-router --ref main
 ```
 
 Если ваш CLI поддерживает `codex plugin add`:
@@ -102,7 +114,7 @@ codex plugin add adaptive-task-router@adaptive-task-router
 ### Из локальной копии
 
 ```sh
-git clone --branch dev https://github.com/drkhisa/adaptive-task-router.git
+git clone --branch main https://github.com/drkhisa/adaptive-task-router.git
 cd adaptive-task-router
 codex plugin marketplace add .
 ```
@@ -180,7 +192,7 @@ codex plugin marketplace remove adaptive-task-router
 
 При установке только скилла удаляется скопированная папка `adaptive-task-router` из папки skills вашей среды.
 
-Для распространения достаточно ссылки на GitHub и инструкции установки. Для воспроизводимого релиза стоит создать неизменяемый git tag и использовать его вместо `--ref dev`. Сейчас предусмотрена установка из GitHub; публикация в каталоге OpenAI не выполнялась.
+Для распространения достаточно ссылки на GitHub и инструкции установки. Для воспроизводимого релиза стоит создать неизменяемый git tag и использовать его вместо `--ref main`. Сейчас предусмотрена установка из GitHub; публикация в каталоге OpenAI не выполнялась.
 
 ## Разработчикам
 

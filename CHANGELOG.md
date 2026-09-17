@@ -10,3 +10,5 @@
 - Short ATR text cues alongside native explicit invocation, ignored-advice suppression, a context-aware 30-minute cooldown, and up to three viable configuration options.
 - Quality-first candidate filtering and relevant prior outcomes, including Sol Medium when Terra Medium is not demonstrably sufficient.
 - Packaging checks and 56 routing fixtures; no executable scripts, runtime dependencies, automatic setting changes or external MCP server.
+- Documented local installation versus workspace cloud import; account-wide personal availability and web/mobile testing remain unverified.
+- GitHub installation instructions target the stable `main` branch; ongoing development remains on `dev`.
